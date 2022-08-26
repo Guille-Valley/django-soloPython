@@ -1,0 +1,9 @@
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    {%for post in posts%}
+    <a 'blog:detail' post.id>{{post.title}}</a>
+    {% endfor %}
+    <button type="submit">Delete</button>
+</form>
